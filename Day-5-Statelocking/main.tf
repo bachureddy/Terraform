@@ -16,7 +16,7 @@ resource "aws_subnet" "my_subnet" {
 
 resource "aws_instance" "my_instance" {
   ami           = "ami-0d27e0fb3bac4d724" # Amazon Linux 2 AMI
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   subnet_id     = aws_subnet.my_subnet.id
   tags = {
     Name = "day5-instance"
